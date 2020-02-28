@@ -1,0 +1,13 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 12rem;
+        color: #303030;
+    }
+    p {
+        font-size: 2rem;
+    }
+}

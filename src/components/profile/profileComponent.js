@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import { browserHistory } from 'react-router';
+import React, {Component} from 'react';     
+
 import './style.scss';
 
 
@@ -9,11 +9,8 @@ class ProfileComponent extends Component {
         this.state = { 
             data: this.props.location.state.data
          }
-    }
+    } 
 
-    componentWillMount() {
-        console.log(this.state.data)
-    }
     render() { 
         const { firstName , lastName, jobTitle , avatar , vote, mobile, email, address, summary } = this.props.location.state.data
         return ( 
@@ -23,6 +20,7 @@ class ProfileComponent extends Component {
                     <div className="employee-avatar" style={{backgroundImage: 'url(' + avatar  + ')'}}></div>
                     <h2>{firstName } {lastName}</h2>
                     <p>{jobTitle}</p>
+                    <p>Total Vote: {vote}</p>
                 </div>
               <div className="container">
                 <div className="card-full">

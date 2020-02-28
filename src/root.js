@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
-import {browserHistory } from 'react-router'
-
 import HeaderComponent from './components/header/headerComponent';
-
-
 export default class Root extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { }
     }
+
+      
 
 
 
@@ -17,7 +15,7 @@ export default class Root extends Component {
             <div>
                 <HeaderComponent />
                 <div className="container-fluid"> 
-                        { this.props.children}  
+                    { this.props.children}  
                 </div>
             </div>
          );

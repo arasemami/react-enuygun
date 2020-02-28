@@ -7,13 +7,17 @@ import './style.scss';
 class EmployeesComponent extends Component {
     constructor(props) {
         super(props);
-        this.state = { }
+        this.state = {
+           
+         }
     }
 
     componentWillMount = async () => {
         await FetchData().then(res=>{
             this.sortingData(res.data);
         });
+    
+         this.sortingData(this.state.data)
     }
 
     sortingData(data){

@@ -4,7 +4,7 @@ import { Router ,  Route , browserHistory  } from 'react-router';
 import RootComponent from './root';
 import EmployeesComponent from './components/employees/employeesComponent';
 import ProfileComponent from './components/profile/profileComponent';
-
+import NotFoundComponent from './components/notFound/notFoundComponent';
 
 class RouterComponent extends Component {
 
@@ -14,19 +14,16 @@ class RouterComponent extends Component {
   } 
   
     render() {
-
- 
-      return (
-       
-            <Router history={browserHistory}>
-              <Route  component={RootComponent}> 
-                  <Route   path="/" component={EmployeesComponent} /> 
-                  <Route   path="employees" component={EmployeesComponent} /> 
-                  <Route   path="profile" component={ProfileComponent} /> 
-              </Route>
-            </Router>
-         
-      );
+        return (
+              <Router history={browserHistory}>
+                <Route  component={RootComponent}> 
+                    <Route   path="/" component={EmployeesComponent} /> 
+                    <Route   path="employees" component={EmployeesComponent} /> 
+                    <Route   path="profile" component={ProfileComponent} /> 
+                    <Route   path="*" component={NotFoundComponent} status={404} />
+                </Route>
+              </Router>
+        );
     }
   }
   
