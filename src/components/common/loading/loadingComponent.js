@@ -1,24 +1,19 @@
-
-
-import React, { Component } from 'react';
-import './style.scss';
-
+import React, {Component} from'react';
+import'./style.scss';
 
 class LoadingComponent extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {  }
     }
-    render() {
-        return (
-            <div className="laoding-container">
-                <div className="loading-box">
-                    <h1>Loading</h1>
-                    <p>Please wait to render data . . .</p>
-                </div>
+    render() { 
+        return ( 
+            <div className="loading-Container">
+                <i className="fab fa-soundcloud"></i>
+                <p>Loading . . .</p>
             </div>
-        );
+         );
     }
 }
-
+ 
 export default LoadingComponent;

@@ -1,10 +1,10 @@
-import base from '../api/baseURL';
-
-function GetToApi() {
-    return fetch(base.baseUrl, {
+ const baseUrl = 'http://localhost:9002/graphql';
+ 
+function FetchData() {
+    return fetch(baseUrl, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({query: "{employee {id,firstName,lastName,vote,jobTitle,avatar}}"})
+        body: JSON.stringify({query: "{employee {id,firstName,lastName,vote,jobTitle,avatar,mobile,email,address,summery}}"})
     }).then(response => {
         const statusCode = response.status
         const data = response.json()
@@ -15,5 +15,5 @@ function GetToApi() {
 
 }
 
-export default GetToApi;
+export default FetchData;
 

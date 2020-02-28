@@ -19,7 +19,7 @@ You will also see any lint errors in the console.
 
 ## Graphql Faker Query <br>
 
-`
+```
 type Employee {
   id: ID
   firstName: String! @fake(type: firstName, locale:tr)
@@ -27,8 +27,12 @@ type Employee {
   jobTitle: String! @fake(type:jobTitle, locale:tr)
   avatar: String! @fake(type:avatarUrl)
   vote: Int! @fake(type:number,options:{minNumber:1,maxNumber:10})
+  mobile:String! @fake(type:phoneNumber)
+  email:String! @fake(type:email)
+  address:String! @fake(type:streetAddress)
+  summery:String! @fake(type:lorem, options:{loremSize:paragraphs})
+  
 }
-
 
 
 type Query {
@@ -36,8 +40,7 @@ type Query {
   getByEmployeeId(id: ID): Employee
   
 }
-
-`
+```
 
 
 
