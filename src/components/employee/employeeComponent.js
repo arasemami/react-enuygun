@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
-import './style.scss'
+import { browserHistory } from 'react-router';
 import VotingComponent from '../common/voting/votingComponent';
-import _loading from '../../assets/icons/loading.gif';
+import './style.scss';
 
 class EmployeeComponent extends Component {
     constructor(props) {
@@ -13,8 +13,11 @@ class EmployeeComponent extends Component {
         this.props.onChangeVote(this.props.index,vote);
     }
 
-    viewEmployee(id){
-        console.log(id)
+    viewEmployee(data){
+        //  browserHistory.push('/profile')
+    browserHistory.push({pathname:'/profile' , state: { data: data}}) 
+
+        console.log(data)
     }
     render() { 
         const { firstName , lastName, jobTitle , avatar , vote } = this.props.data;

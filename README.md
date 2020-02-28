@@ -30,7 +30,7 @@ type Employee {
   mobile:String! @fake(type:phoneNumber)
   email:String! @fake(type:email)
   address:String! @fake(type:streetAddress)
-  summery:String! @fake(type:lorem, options:{loremSize:paragraphs})
+  summary:String! @fake(type:lorem, options:{loremSize:paragraphs})
   
 }
 

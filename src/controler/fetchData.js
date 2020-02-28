@@ -4,7 +4,7 @@ function FetchData() {
     return fetch(baseUrl, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({query: "{employee {id,firstName,lastName,vote,jobTitle,avatar,mobile,email,address,summery}}"})
+        body: JSON.stringify({query: "{employee {id,firstName,lastName,vote,jobTitle,avatar,mobile,email,address,summary}}"})
     }).then(response => {
         const statusCode = response.status
         const data = response.json()
