@@ -1,0 +1,7 @@
+version: "3"
+services:
+  backend:
+    image: arasemami/react-enuygyn:latest
+    container_name: react-enuygyn
+    ports:
+     - "80:80"

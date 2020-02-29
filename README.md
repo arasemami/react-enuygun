@@ -1,13 +1,14 @@
  
 
-## Installation
+## Installation  
 to install react project open the terminal and run this code :<br>
 
 
 ``` npm install ```
 
 
-## Run the Project <br>
+
+## Run the Project with npm <br>
 
 ### `npm start`
 
@@ -17,7 +18,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-## Graphql Faker Query <br>
+## Run the Project with Docker <br>
+
+```docker run -p 8090:80 arasemami/react-enuygyn```
+
+### Run at the background
+
+```docker run -d -p 8090:80 arasemami/react-enuygyn```
+
+
+## Schema of Graphql Faker Query <br>
 
 ```
 type Employee {
@@ -51,11 +61,18 @@ type Query {
 
 
 
- ## What i use in this project <br>
+# What I have done.
 
- ### - react js
- ### - graphql
- ### - Docker
+- Create employees page and view details of employee.
+- Initialized DOCKER configuration.
+- Used Scss for styling.
+- Used React Router for navigate between the pages.
+- Responsive Design
+ - [x] Safari is fixed.
+ - [x] Google Chrome Is fixed.
+ - [x] Firefox is fixed.
+ - [x] Mobile Responsive is fixed.
+ - [ ] Internet explorer ( note: I don't have this web browsers :D ).
 
 
 

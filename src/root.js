@@ -6,10 +6,6 @@ export default class Root extends Component {
         this.state = { }
     }
 
-      
-
-
-
     render() { 
         return ( 
             <div>

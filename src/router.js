@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 import { Router ,  Route , browserHistory  } from 'react-router';
-
+ // child components -->
 import RootComponent from './root';
 import EmployeesComponent from './components/employees/employeesComponent';
 import ProfileComponent from './components/profile/profileComponent';

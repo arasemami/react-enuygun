@@ -1,7 +1,5 @@
 import React, {Component} from 'react';     
-
 import './style.scss';
-
 
 class ProfileComponent extends Component {
     constructor(props) {
@@ -10,12 +8,29 @@ class ProfileComponent extends Component {
             data: this.props.location.state.data
          }
     } 
+    backToHistory() {
+        this.props.router.goBack();
+    }
 
     render() { 
-        const { firstName , lastName, jobTitle , avatar , vote, mobile, email, address, summary } = this.props.location.state.data
+        const { 
+                firstName, 
+                lastName, 
+                jobTitle, 
+                avatar, 
+                vote, 
+                mobile, 
+                email, 
+                address, 
+                summary 
+            } = this.props.location.state.data;
+
         return ( 
             <div className="container-fluid">
                 <div className="avatar-container" >
+                    <div className="btn-back" onClick={() => this.backToHistory()}>
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
                     <div className="bg-image" style={{backgroundImage: 'url(' + avatar  + ')'}}></div>
                     <div className="employee-avatar" style={{backgroundImage: 'url(' + avatar  + ')'}}></div>
                     <h2>{firstName } {lastName}</h2>
@@ -44,7 +59,7 @@ class ProfileComponent extends Component {
                 <div className="card-full">
                     <h2>summary</h2>
                     <hr className="silver"/>
-        <p className="summary">{summary}</p>
+                    <p className="summary">{summary}</p>
                 </div>
               </div>
        
