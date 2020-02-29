@@ -24,12 +24,12 @@ class ProfileComponent extends Component {
 			address, 
 			summary 
 		} = this.props.location.state.data;
-
+		
 		return ( 
 			<div className="container-fluid">
 				<div className="avatar-container" >
 					<div className="btn-back" onClick={() => this.backToHistory()}>
-						<i class="fas fa-chevron-left"></i>
+						<i className="fas fa-chevron-left"></i>
 					</div>
 					<div className="bg-image" style={{backgroundImage: 'url(' + avatar  + ')'}}></div>
 					<div className="employee-avatar" style={{backgroundImage: 'url(' + avatar  + ')'}}></div>

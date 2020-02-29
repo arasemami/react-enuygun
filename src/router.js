@@ -5,6 +5,7 @@ import RootComponent from './root';
 import EmployeesComponent from './components/employees/employeesComponent';
 import ProfileComponent from './components/profile/profileComponent';
 import NotFoundComponent from './components/notFound/notFoundComponent';
+import SampleComponent from './components/sample/sampleComponent';
 
 class RouterComponent extends Component {
 
@@ -20,6 +21,7 @@ class RouterComponent extends Component {
 					<Route   path="/" component={EmployeesComponent} /> 
 					<Route   path="employees" component={EmployeesComponent} /> 
 					<Route   path="profile" component={ProfileComponent} /> 
+					<Route   path="sample" component={SampleComponent} /> 
 					<Route   path="*" component={NotFoundComponent} status={404} />
 				</Route>
 			</Router>

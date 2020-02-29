@@ -13,7 +13,8 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "react-hooks"
     ],
     "rules": {
         "indent": [
@@ -22,6 +23,8 @@ module.exports = {
         ],
         "react/jsx-uses-react": "error",   
         "react/jsx-uses-vars": "error" ,
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn" ,
         "linebreak-style": [
             "error",
             "unix"
